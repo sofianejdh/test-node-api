@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.send('The Home Page')
 })
 
-mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://root:password@206.189.114.230:27017', {useNewUrlParser: true, useUnifiedTopology: true});
 
 mongoose.connection.once('open', function(){
     console.log('conneciton has been made...')
